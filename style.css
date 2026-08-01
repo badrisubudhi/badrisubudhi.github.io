@@ -199,13 +199,21 @@ nav {
   box-shadow: 0 4px 14px rgba(5, 150, 105, 0.2);
   transition: var(--transition-smooth);
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .cta-button:hover {
   background: var(--accent-color-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(5, 150, 105, 0.35);
+}
+
+.cta-button svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
