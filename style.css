@@ -1950,4 +1950,14 @@ body.modal-open {
   }
 }
 
-
+/* Keep student portraits inside the existing circular avatar. */
+.student-avatar-photo {
+  display: block;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  object-fit: cover;
+  object-position: 50% 35%;
+  background: #fff;
+}
