@@ -1,0 +1,148 @@
+/* Plain citation paragraphs keep numbering and emphasis when copied into documents. */
+body.publications-page {
+  background: #fff;
+  color: #222;
+}
+
+.publications-document {
+  max-width: 1120px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.publications-document h1 {
+  margin: 0 0 2rem;
+  font-family: inherit;
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.publication-section {
+  margin-bottom: 2rem;
+}
+
+.publication-controls {
+  margin-bottom: 2rem;
+}
+
+.publication-controls label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 14px;
+}
+
+.publication-controls input {
+  width: 100%;
+  max-width: 440px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+}
+
+.publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.publication-filters button {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.publication-filters button:hover {
+  background: #f4f4f4;
+}
+
+.publication-filters button[aria-pressed="true"] {
+  background: #eee;
+  border-color: #555;
+  color: #111;
+  font-weight: 700;
+}
+
+.publication-controls :focus-visible {
+  outline: 2px solid #165ca0;
+  outline-offset: 2px;
+}
+
+.publications-document [hidden] {
+  display: none !important;
+}
+
+.publication-section h2 {
+  margin: 0 0 1rem;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.publication-entry {
+  margin: 0 0 1rem;
+  overflow-wrap: break-word;
+}
+
+.publication-entry strong {
+  font-weight: 700;
+}
+
+.publication-entry a {
+  color: #165ca0;
+  text-decoration: underline;
+}
+
+.publication-entry a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .publications-document {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .publications-document h1 {
+    font-size: 30px;
+  }
+}
+
+@media print {
+  .publications-page header,
+  .publication-controls {
+    display: none;
+  }
+
+  .publications-document {
+    max-width: none;
+    padding: 0;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .publication-section h2 {
+    break-after: avoid;
+  }
+
+  .publication-entry {
+    orphans: 2;
+    widows: 2;
+  }
+
+  .publication-entry a {
+    color: inherit;
+  }
+}
